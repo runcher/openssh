@@ -7,5 +7,8 @@ LABEL org.opencontainers.image.description="Minimalist image for running openssh
 # Install openssh-client
 RUN apk add --no-cache openssh-client
 
+# Change workdir to SSH directory.
+WORKDIR /root/.ssh
+
 # Execute openssh-client by default.
 CMD ["/bin/ssh"]
