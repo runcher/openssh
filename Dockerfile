@@ -7,5 +7,5 @@ LABEL org.opencontainers.image.description="Minimalist image for running openssh
 # Install openssh-client
 RUN apk add --no-cache openssh-client
 
-# Use openssh-client as entrypoint.
-ENTRYPOINT ["/usr/bin/ssh"]
+# Execute openssh-client by default.
+CMD ["/bin/ssh"]
